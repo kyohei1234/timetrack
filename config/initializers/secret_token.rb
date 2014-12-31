@@ -12,4 +12,4 @@ def secure_token
   end
 end
 
-timetrack::Application.config.secret_key_base = secure_token
+Timetrack::Application.config.secret_key_base = secure_token
