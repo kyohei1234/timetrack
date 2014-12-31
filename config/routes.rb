@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
+  get "mypage/index"
   get "top/index"
   devise_for :users, :controllers => {
-  :sessions      => "users/sessions",
-  :registrations => "users/registrations",
-  :passwords     => "users/passwords",
-  :omniauth_callbacks => "users/omniauth_callbacks" 
+    :omniauth_callbacks => "users/omniauth_callbacks" 
   }
+
   root 'top#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
