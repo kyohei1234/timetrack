@@ -20,19 +20,27 @@ class TracksController < ApplicationController
     start_words = client.search("from:#{current_user.name} #{@track.start_word}")
     end_words = client.search("from:#{current_user.name} #{@track.end_word}")
 
-    latest_start_time = @track.records.order('start_time DESC').first.start_time
+    latest_record = @track.records.order('start_time DESC').first
+    if latest_record
+      latest_start_time = latest_record.start_time
+    end
 
     start_words.zip(end_words).each do |start_word, end_word|
       start_time = start_word.created_at
-
-      if (start_time <= latest_start_time)
+      end_time = end_word.created_at
+      
+      if !end_time
         break
       end
 
-      end_time = end_word.created_at
+      if latest_start_time && start_time <= latest_start_time
+        break
+      end
+
       @record = @track.records.build(start_time: start_time, end_time: end_time)
       @record.save 
     end
+
   end
 
   # GET /tracks/new

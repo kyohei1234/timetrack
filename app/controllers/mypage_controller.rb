@@ -1,6 +1,7 @@
 class MypageController < ApplicationController
   def index
   	@user = current_user
+    @tracks = @user.tracks
   end
 
   def tweet

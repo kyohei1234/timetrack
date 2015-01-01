@@ -1,19 +1,24 @@
+= @user.name
+
+= @text
+
 = link_to '新規ワード登録', new_track_path
+      
+
+/ = link_to 'つぶやく', tweet_mypage_index_path
 
 %section.container
   .col-xs-12.col-sm-6.col-md-6.col-lg-12
     .content-panel
-      %h3
-        = @track.start_word
-        = @track.end_word
+      %h3 登録済みワード一覧
 
       %table.table.table-striped.table-hover
         %thead
           %tr
-            %th 開始時間
-            %th 終了時間
+            %th 開始
+            %th 終了
             %th
             %th
             %th
         %tbody
-          = render @track.records
+          = render @tracks

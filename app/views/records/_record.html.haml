@@ -1,2 +1,7 @@
-= record.start_time
-= record.end_time
+%tr
+  %td= record.start_time
+  %td= record.end_time
+  %td= record.end_time - record.start_time
+  / %td= link_to '内容を見る', track
+  / %td= link_to '編集する', edit_track_path(track)
+  / %td= link_to '削除する', track, :method => :delete, :data => { :confirm => 'Are you sure?' }
