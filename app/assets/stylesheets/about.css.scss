@@ -9,6 +9,20 @@ body
 {
 	margin:0
 }
+
+.container h1{
+	text-align: center
+}
+.container p 
+{
+	text-align: center
+}
+
+.used-user
+{
+	text-align: center;
+	margin-bottom: 10px
+}
 header
 {
 	background-color: #E7DFDF;
@@ -17,7 +31,7 @@ header
 }
 .pull-right li{
 	float: right;
-	height: 60px;
+	height: 40px;
 	margin: 5px;
 	list-style: none;
 }
@@ -32,14 +46,32 @@ header
 //footer
 footer{
 	height:60px;
-	width: 1440px;
+	width: 100%;
 	font-size: 15px;
 	list-style: none;
-	background-color: #E7DFDF
+	background-color: #E7DFDF;
+	margin-top: 660px
 }
 footer li{
 	list-style: none;
 	float: right;
 	margin: 5px;
-	display: block
+	display: block;
+}
+
+//user
+.users li
+{
+	list-style: none;
+	float: left;
+	margin: 80px 10px 0 10px;
+}
+
+// .user {
+// 	margin-top: 200px
+// }
+
+.mypage_main-contents
+{
+	margin-top:30px 
 }
