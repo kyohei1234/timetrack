@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
-  get "mypage/index"
-  get "top/index"
+
+  resources :tracks do
+    resources :records
+  end
+
+  # mypage
+  resources :mypage, only: [:index] do
+    collection do
+      get :tweet
+    end
+  end
+
   devise_for :users, :controllers => {
     :omniauth_callbacks => "users/omniauth_callbacks" 
   }
