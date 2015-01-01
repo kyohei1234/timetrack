@@ -1,11 +1,9 @@
-= @user.name
-
-= @text
-
-= link_to '新規ワード登録', new_track_path
-      
-
-/ = link_to 'つぶやく', tweet_mypage_index_path
+.mypage_main-contents
+  %ul.users
+    %li= @user.name
+    %li= @text
+    %li= link_to '新規ワード登録', new_track_path
+    %li= link_to 'つぶやく', tweet_mypage_index_path
 
 %section.container
   .col-xs-12.col-sm-6.col-md-6.col-lg-12
