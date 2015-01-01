@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141231161605) do
+ActiveRecord::Schema.define(version: 20150101084054) do
+
+  create_table "records", force: true do |t|
+    t.integer  "track_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tracks", force: true do |t|
+    t.integer  "user_id"
+    t.string   "word"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "start_word"
+    t.string   "end_word"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

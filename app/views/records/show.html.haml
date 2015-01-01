@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Track:
+  = @record.track_id
+%p
+  %b Start time:
+  = @record.start_time
+%p
+  %b End time:
+  = @record.end_time
+
+= link_to 'Edit', edit_record_path(@record)
+\|
+= link_to 'Back', records_path
