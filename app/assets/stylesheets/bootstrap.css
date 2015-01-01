@@ -3358,7 +3358,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 1;
   color: #555;
   text-align: center;
-  background-color: #eee;
+  background-color: #E7DFDF;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -4364,12 +4364,13 @@ a.list-group-item.active > .badge,
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 30px;
+    padding-bottom: 40px;
   }
   .container .jumbotron {
     padding-right: 60px;
     padding-left: 60px;
+    margin-top: 100px
   }
   .jumbotron h1,
   .jumbotron .h1 {
